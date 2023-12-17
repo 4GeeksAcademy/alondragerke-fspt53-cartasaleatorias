@@ -1,1 +1,94 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  margin: 0;
+  font-family: "Hedvig Letters Serif", serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  width: 30vh;
+  margin-top: 5vh;
+  border: none;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Centra horizontalmente */
+  margin-bottom: 3vh;
+}
+
+.card-header {
+  text-align: left;
+  background-color: white;
+  border: none;
+}
+
+.card-body {
+  text-align: center;
+  font-size: 800%;
+}
+
+.card-footer {
+  text-align: right;
+  background-color: white;
+  border: none;
+}
+
+.symbol {
+  height: 25%;
+  width: 25%;
+  float: left;
+}
+
+.reverseSymbol {
+  height: 25%;
+  width: 25%;
+  transform: scaleY(-1);
+}
+
+.botonesExtras {
+  display: flex;
+}
+
+.icon {
+  height: 2vw;
+  width: 2vw;
+}
+
+.btn {
+  font-size: 2vw;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#countdown {
+  border: 0.1vw solid #1c8454;
+  border-radius: 0.25vw;
+  padding: 0.375vw 0.75vw;
+  height: 4vw;
+  width: 7vw;
+  font-size: 1.75vw;
+  color: #1c8454;
+  transition: background-color 0.3s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#countdown:hover {
+  background-color: #1c8454;
+  color: whitesmoke;
+}
+
+.form-group {
+  font-size: 1.4vw;
+  color: #1c8454;
+}
+
+.form-control {
+  width: 150px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}

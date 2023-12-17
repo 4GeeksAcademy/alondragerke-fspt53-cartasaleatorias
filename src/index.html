@@ -3,27 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Cards</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Josefin+Sans:wght@200&family=Montserrat:wght@300;400&family=Noto+Sans&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="bg bg-success-subtle">
     <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+      <div
+        id="carta"
+        class="card rounded-4 position-relative"
+      >
+        <div class="card-header position-absolute top-0 start-0 m-4">
+          <img
+            id="paloImagen"
+            class="symbol"
+            src="./images/clubs.png"
+            alt="card symbol"
+          />
+        </div>
+        <div class="card-body">
+          <p
+            id="valorCarta"
+            class="position-absolute top-50 start-50 translate-middle"
+          >
+            5
+          </p>
+        </div>
+        <div class="card-footer position-absolute bottom-0 end-0 m-4">
+          <img
+            id="paloImagenReverse"
+            class="reverseSymbol"
+            src="./images/clubs.png"
+            alt="reverse card symbol"
+          />
+        </div>
+      </div>
+      <div
+        class="botonesExtras d-flex justify-content-center align-items-center"
+      >
+        <!-- botones extras-->
+        <div id="contenedorBotonNuevaCarta" class="cartaNueva">
+          <button
+            id="botonNuevaCarta"
+            type="button"
+            class="btn btn-outline-success m-3 pe-3"
+            onclick="generarNuevaCarta()"
+          >
+            <img
+              class="icon m-1 me-3"
+              src="./images/mix.png"
+              alt="random new card"
+            />Shuffle
+          </button>
+        </div>
+        <div class="temporizador">
+          <span
+            id="countdown"
+            class="d-flex align-items-center justify-content-center m-4 p-4"
+          >
+            00:10
+          </span>
+        </div>
+      </div>
+      <div
+        class="redimensionar container-fluid d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="d-flex flex-row">
+          <div class="form-group mx-3">
+            <label for="widthInput">Width:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="widthInput"
+              placeholder="Width"
+            />
+          </div>
+          <div class="form-group mx-3">
+            <label for="heightInput">Height:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="heightInput"
+              placeholder="Height"
+            />
+          </div>
+        </div>
+        <button id="cambiarTamanio" class="btn btn-outline-success m-5">
+         Change size
+        </button>
+        </div>
+      </div>
+      <div class="fixed-bottom p-4 d-flex justify-content-center align-items-center">
+        <p>Made with ❤️ by <a href="https://github.com/alondragerke">Alondra Gerke</a></p>
       </div>
     </div>
+    <script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
